@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
         printf("Message sent: %s\n", message.mesg_text);
     } else if (strcmp(argv[1], "reader") == 0) {
         if (msgrcv(msgid, &message, sizeof(message), 1, 0) == -1) {
-            perror("msgrcv");
+            perror("msgrcv"); 
             return 1;
         }
         printf("Message received: %s\n", message.mesg_text);

@@ -21,8 +21,8 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## C program that receives a message from message queue and display them
-```c
-// msqueue.c - Combined Writer/Reader for System V Message Queue
+
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    key = ftok("msgq.c", 65);
+    key = ftok("progfile", 65);
     if (key == -1) {
         perror("ftok");
         return 1;
@@ -79,14 +79,15 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
 ```
 
 
-
 ## OUTPUT
-[
-![exp04](./img/exp04.png)](https://github.com/AsinrenixV/Linux-IPC-Message-Queues/blob/main/img/exp04.png?raw=true)
 
+![writer](https://github.com/user-attachments/assets/34a0ec42-d7ad-4b3f-8597-e7199fc4ce16)
+![reader](https://github.com/user-attachments/assets/702688f2-b4e5-4984-a6c4-ac26489dffec)
+![ipcs](https://github.com/user-attachments/assets/050bc070-db14-49fe-8158-7ed00f2499c5)
 
 
 # RESULT:
